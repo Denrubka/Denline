@@ -77,39 +77,38 @@ header {
 .anim-text1 {
     transform-origin: right;
     left: 0;
-    top: -20%;
-    transform: translateX(-70%);
-    animation: text1 6s ease-in-out;
+    transform: translateX(-25%) translateY(50%);
+    animation: text1 15s ease-in-out 10s;
+    font-size: 15px;
 }
 @keyframes text1 {
     0% {
-        font-size: 30px;
         opacity: 0;
-        filter: blur(5px)
+        filter: blur(5px);
     } 50% {
-              opacity: 1;
-              filter: blur(0)
-          }
+          opacity: 1;
+          filter: blur(0)
+      }
     80% {
         filter: blur(10px)
     }
     100% {
-        transform: translateX(-80%);
-        top: -30%;
-        font-size: 37px;
+        transform: translateX(-50%) translateY(100%);
+        font-size: 30px;
         opacity: 0;
         filter: blur(10px)
     }
 }
 .anim-text2 {
     transform-origin: center;
-    top: -40%;
+    top: -20%;
     left: 0;
-    animation: text2 6s ease-in-out 1s;
+    animation: text2 14s ease-in-out 1s;
+    font-size: 15px;
 }
 @keyframes text2 {
     0% {
-        font-size: 30px;
+        font-size: 15px;
         opacity: 0;
         filter: blur(5px)
     } 50% {
@@ -120,8 +119,8 @@ header {
         filter: blur(10px)
     }
     100% {
-        top: -30%;
-        left: 10%;
+        top: -50%;
+        left: -60%;
         font-size: 37px;
         opacity: 0;
         filter: blur(10px)
@@ -130,51 +129,51 @@ header {
 .anim-text3 {
     transform-origin: left;
     top: -20%;
-    transform: translateX(80%);
-    animation: text3 5s ease-in-out 2s;
+    transform: translateX(55%);
+    animation: text3 9s ease-in-out .2s;
+    font-size: 20px;
 }
 @keyframes text3 {
     0% {
-        font-size: 30px;
         opacity: 0;
-        filter: blur(5px);
     } 50% {
           opacity: 1;
-          filter: blur(0)
       }
     80% {
-        filter: blur(10px)
-    }
+        filter: blur(0);
+}
     100% {
-        top: -10%;
-        transform: translateX(90%);
+        top: -30%;
+        transform: translateX(50%);
         font-size: 37px;
         opacity: 0;
-        filter: blur(10px)
+        filter: blur(10px);
     }
 }
 .anim-text4 {
     transform-origin: left;
-    top: 50%;
-    transform: translateX(80%);
-    animation: text4 5s ease-in-out 2s;
+    top: 10%;
+    transform: translateX(70%);
+    font-size: 15px;
+    animation: text4 10s ease-in-out 6s;
 }
 @keyframes text4 {
     0% {
-        font-size: 30px;
         opacity: 0;
-        filter: blur(5px);
-    } 50% {
+        filter: blur(10px);
+    } 20% {
+              filter: blur(0);
+          }
+    50% {
           opacity: 1;
-          filter: blur(0)
       }
     80% {
-        filter: blur(10px)
+        filter: blur(1px);
     }
     100% {
-        top: 60%;
-        transform: translateX(90%);
-        font-size: 37px;
+        top: -20%;
+        transform: translateX(73%);
+        font-size: 30px;
         opacity: 0;
         filter: blur(10px)
     }
@@ -184,19 +183,22 @@ header {
     right: 0;
     top: 100%;
     transform: translateX(70%);
-    animation: text5 5s ease-in-out 2s;
+    animation: text5 11s ease-in-out 5s;
 }
 @keyframes text5 {
     0% {
-        font-size: 30px;
+        font-size: 20px;
         opacity: 0;
-        filter: blur(5px);
-    } 50% {
+        filter: blur(10px);
+    } 30% {
           opacity: 1;
           filter: blur(0)
       }
     80% {
-        filter: blur(10px)
+        filter: blur(0)
+    }
+    90% {
+        filter: blur(5px);
     }
     100% {
         top: 110%;
@@ -209,13 +211,13 @@ header {
 .anim-text6 {
     transform-origin: right;
     left: 0;
-    top: 100%;
-    transform: translateX(-70%);
-    animation: text6 5s ease-in-out 2s;
+    top: 0;
+    transform: translateX(-60%) translateY(0);
+    animation: text6 10s ease-in-out .5s ;
+    font-size: 15px;
 }
 @keyframes text6 {
     0% {
-        font-size: 30px;
         opacity: 0;
         filter: blur(5px);
     } 50% {
@@ -226,8 +228,8 @@ header {
         filter: blur(10px)
     }
     100% {
-        transform: translateX(-90%);
-        font-size: 37px;
+        transform: translateX(-80%);
+        font-size: 30px;
         opacity: 0;
         filter: blur(10px)
     }

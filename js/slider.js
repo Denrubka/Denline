@@ -51,8 +51,10 @@ const cards = [];
 let start;
 
 let arrText = [];
+let arrTitle = [];
 const texts = document.querySelectorAll('.card');
 const textBlocks = document.querySelectorAll('.text');
+const titleBlock = document.querySelector('.text-title');
 let count = 0;
 
 // Instantiate cards and populate cards array
@@ -101,10 +103,11 @@ gallery.addEventListener("touchend", (e) => {
 });
 
 texts.forEach(text => {
-  arrText.push(text.getAttribute('data-text'))
+  arrText.push(text.getAttribute('data-text'));
+  arrTitle.push(text.getAttribute('data-title'));
 })
 
-
+console.log(arrTitle);
 next.addEventListener('click', () => {
   swipeNextTextSlider()
 });
@@ -132,6 +135,7 @@ function swipeNextTextSlider() {
 function addTextSlider() {
   textBlocks.forEach(textBlock => {
     textBlock.textContent = arrText[count];
+    titleBlock.textContent = arrTitle[count];
   })
 }
 addTextSlider()
