@@ -79,3 +79,9 @@ function scrollTabs() {
         }
 
 scrollTabs()
+
+const works = document.querySelector('.works-video');
+
+works.addEventListener('scroll', e => {
+    console.log(e)
+})
