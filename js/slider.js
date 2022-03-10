@@ -50,6 +50,11 @@ const gallery = document.querySelector(".gallery");
 const cards = [];
 let start;
 
+let arrText = [];
+const texts = document.querySelectorAll('.card');
+const textBlocks = document.querySelectorAll('.text');
+let count = 0;
+
 // Instantiate cards and populate cards array
 document.querySelectorAll(".card").forEach((e, pos = 0) => {
   pos += 1;
@@ -83,12 +88,50 @@ gallery.addEventListener("touchend", (e) => {
       cards.forEach((c) => {
         c.moveNext();
       });
+      swipeNextTextSlider();
     }
 
     if (start > end) {
       cards.forEach((c) => {
         c.movePrev();
       });
+      swipePrevTextSlider();
     }
   }
 });
+
+texts.forEach(text => {
+  arrText.push(text.getAttribute('data-text'))
+})
+
+
+next.addEventListener('click', () => {
+  swipeNextTextSlider()
+});
+
+prev.addEventListener('click', () => {
+  swipePrevTextSlider();
+})
+
+function swipePrevTextSlider() {
+  count--;
+  if(count < 0) {
+    count = arrText.length - 1;
+  }
+  addTextSlider();
+}
+
+function swipeNextTextSlider() {
+  count++;
+  if(count === arrText.length) {
+    count = 0;
+
+  }
+  addTextSlider();
+}
+function addTextSlider() {
+  textBlocks.forEach(textBlock => {
+    textBlock.textContent = arrText[count];
+  })
+}
+addTextSlider()
