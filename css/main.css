@@ -78,7 +78,7 @@ header {
     transform-origin: right;
     left: 0;
     transform: translateX(-25%) translateY(50%);
-    animation: text1 15s ease-in-out 10s;
+    animation: text1 15s ease-in-out 10s infinite;
     font-size: 15px;
 }
 @keyframes text1 {
@@ -103,7 +103,7 @@ header {
     transform-origin: center;
     top: -20%;
     left: 0;
-    animation: text2 14s ease-in-out 1s;
+    animation: text2 14s ease-in-out 1s infinite;
     font-size: 15px;
 }
 @keyframes text2 {
@@ -130,7 +130,7 @@ header {
     transform-origin: left;
     top: -20%;
     transform: translateX(55%);
-    animation: text3 9s ease-in-out .2s;
+    animation: text3 9s ease-in-out .2s infinite;
     font-size: 20px;
 }
 @keyframes text3 {
@@ -152,10 +152,10 @@ header {
 }
 .anim-text4 {
     transform-origin: left;
-    top: 10%;
+    top: 20%;
     transform: translateX(70%);
     font-size: 15px;
-    animation: text4 10s ease-in-out 6s;
+    animation: text4 10s ease-in-out 6s infinite;
 }
 @keyframes text4 {
     0% {
@@ -171,7 +171,7 @@ header {
         filter: blur(1px);
     }
     100% {
-        top: -20%;
+        top: 10%;
         transform: translateX(73%);
         font-size: 30px;
         opacity: 0;
@@ -183,7 +183,7 @@ header {
     right: 0;
     top: 100%;
     transform: translateX(70%);
-    animation: text5 11s ease-in-out 5s;
+    animation: text5 11s ease-in-out 5s infinite;
 }
 @keyframes text5 {
     0% {
@@ -213,7 +213,7 @@ header {
     left: 0;
     top: 0;
     transform: translateX(-60%) translateY(0);
-    animation: text6 10s ease-in-out .5s ;
+    animation: text6 10s ease-in-out .5s infinite ;
     font-size: 15px;
 }
 @keyframes text6 {
@@ -481,7 +481,7 @@ main {
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
-.team__slider__col2__text p span {
+.team__slider__col2__text p:first-child {
     font-size: calc(26px + (56 - 26) * ((100vw - 428px) / (1920 - 428)));
     text-transform: uppercase;
     color: #858585;
