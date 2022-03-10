@@ -25,7 +25,7 @@ class Card {
     return prevPosition;
   }
 
-  moveNext() {
+  moveNext(attr) {
     this.node.classList.replace(
       `position${this.position}`,
       `position${this.nextPosition()}`

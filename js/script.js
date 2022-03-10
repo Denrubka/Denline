@@ -60,18 +60,52 @@ function showTabsContent(b){
     }
 }
 
-// function scrollTabs() {
-//     const tabs = document.querySelector('.works-video__button');
-//
-//    document.addEventListener('scroll', () => {
-//         const count = 30;
-//         let posTabs = tabs.getBoundingClientRect().y;
-//         if(posTabs <= count) {
-//             tabs.classList.add('works-video__button--sticky')
-                //         } else {
-//             tabs.classList.remove('works-video__button--sticky')
-                //         }
-//     })
-        // }
+let arr = [];
+const texts = document.querySelectorAll('.card');
+const textBlocks = document.querySelectorAll('.text');
+const prevBtn = document.querySelector('.fa-chevron-circle-left');
+const nextBtn = document.querySelector('.fa-chevron-circle-right');
+let count = 0;
+texts.forEach(text => {
+    arr.push(text.getAttribute('data-text'))
+})
 
-// scrollTabs()
+
+nextBtn.addEventListener('click', () => {
+    swipeNextTextSlider()
+});
+
+prevBtn.addEventListener('click', () => {
+    swipePrevTextSlider();
+    console.log(count)
+})
+
+function swipePrevTextSlider() {
+    count--;
+    textBlocks.forEach(textBlock => {
+        textBlock.textContent = arr[count];
+    })
+    if(count < 0) {
+        count = arr.length - 1;
+        addTextSlider();
+    }
+}
+
+function swipeNextTextSlider() {
+    count++;
+    textBlocks.forEach(textBlock => {
+        textBlock.textContent = arr[count];
+    })
+    if(count === arr.length) {
+        count = 0;
+        addTextSlider();
+    }
+}
+function addTextSlider() {
+    textBlocks.forEach(textBlock => {
+        textBlock.textContent = arr[count];
+    })
+}
+addTextSlider()
+
+
