@@ -8,6 +8,37 @@ body {
     background-color: #121212;
 }
 
+.bg-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+}
+.bg-video > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto; 
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+    .bg-video > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
 header {
     /* max-width: 1920px; */
     max-height: 980px;
@@ -52,24 +83,16 @@ main {
     width: calc(100vw - 4.5rem);
 }
 .works-video {
-    position: relative;
     width: 100%;
     margin-top: calc(28px + (58 - 28) * ((100vw - 428px) / (1920 - 428)));
 }
 .works-video__button {
-    background: #121212;
     display: flex;
     align-items: center;
     height: calc(24px + (75 - 24) * ((100vw - 428px) / (1920 - 428)));
     padding-left: calc(24px + (126 - 24) * ((100vw - 428px) / (1920 - 428)));
 }
-.works-video__button--sticky {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top: 20px;
-}
+
 .works-video__button__name {
     display: flex;
     align-items: center;
@@ -99,6 +122,8 @@ main {
 }
 .works-video__list {
     display: flex;
+    overflow-y: scroll;
+    max-height: 554px;
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
@@ -106,6 +131,14 @@ main {
     padding-bottom: calc(15px + (71 - 15) * ((100vw - 428px) / (1920 - 428)));
     padding-top: calc(14px + (64 - 14) * ((100vw - 428px) / (1920 - 428)));
 }
+/* хром, сафари */
+.works-video__list::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.works-video__list { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.works-video__list { overflow: -moz-scrollbars-none; }
 .works-video__list__card {
     max-width: 511px;
     width: auto;

@@ -59,16 +59,19 @@ function showTabsContent(b){
         tabContent[b].classList.add('show');
     }
 }
-const tabs = document.querySelector('.works-video__button');
-const team = document.querySelector('.team');
 
-document.addEventListener('scroll', () => {
-    const count = 30;
-    let posTabs = tabs.getBoundingClientRect().y;
-    let posTeam = team.getBoundingClientRect().y;
-    if(posTabs <= count) {
-        tabs.classList.add('works-video__button--sticky')
-    } else {
-        tabs.classList.remove('works-video__button--sticky')
-    }
-})
+// function scrollTabs() {
+//     const tabs = document.querySelector('.works-video__button');
+//
+//    document.addEventListener('scroll', () => {
+//         const count = 30;
+//         let posTabs = tabs.getBoundingClientRect().y;
+//         if(posTabs <= count) {
+//             tabs.classList.add('works-video__button--sticky')
+                //         } else {
+//             tabs.classList.remove('works-video__button--sticky')
+                //         }
+//     })
+        // }
+
+// scrollTabs()
