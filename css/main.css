@@ -135,6 +135,7 @@ header {
 }
 @keyframes text3 {
     0% {
+        transform: scale(0.8);
         opacity: 0;
     } 50% {
           opacity: 1;
@@ -143,8 +144,8 @@ header {
         filter: blur(0);
 }
     100% {
-        top: -30%;
-        transform: translateX(50%);
+        /*top: -30%;*/
+        transform: scale(1.5);
         font-size: 37px;
         opacity: 0;
         filter: blur(10px);
@@ -315,6 +316,8 @@ main {
 }
 .works-video__list {
     display: flex;
+    max-height: 554px;
+    overflow-x: scroll;
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
@@ -322,6 +325,14 @@ main {
     padding-bottom: calc(15px + (71 - 15) * ((100vw - 428px) / (1920 - 428)));
     padding-top: calc(14px + (64 - 14) * ((100vw - 428px) / (1920 - 428)));
 }
+/* хром, сафари */
+.works-video__list::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+.works-video__list { -ms-overflow-style: none; }
+
+/* фф (свойство больше не работает, других способов тоже нет)*/
+.works-video__list { overflow: -moz-scrollbars-none; }
 .works-video__list__card {
     max-width: 511px;
     width: auto;
