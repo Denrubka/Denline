@@ -271,21 +271,43 @@ main {
     width: calc(100vw - 4.5rem);
 }
 .works-video {
+    position: relative;
     width: 100%;
     margin-top: calc(28px + (58 - 28) * ((100vw - 428px) / (1920 - 428)));
 }
+.works-video__head {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    height: calc(24px + (75 - 24) * ((100vw - 428px) / (1920 - 428)));
+}
+.works-video__head--sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.works-video__wrapper {
+    position: relative;
+    overflow: hidden;
+}
 .works-video__button {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     height: calc(24px + (75 - 24) * ((100vw - 428px) / (1920 - 428)));
     padding-left: calc(24px + (126 - 24) * ((100vw - 428px) / (1920 - 428)));
 }
-.works-video__button--sticky {
-    position: sticky;
+.tabs-bg {
+    position: absolute;
+    transform: translateY(-56%);
+    width: 1920px;
+    height: 1000px;
+    z-index: 0;
     top: 0;
     left: 0;
-    right: 0;
-    padding-top: 30px;
 }
 .works-video__button__name {
     display: flex;
@@ -316,8 +338,6 @@ main {
 }
 .works-video__list {
     display: flex;
-    max-height: 554px;
-    overflow-x: scroll;
     flex-wrap: wrap;
     justify-content: center;
     height: auto;

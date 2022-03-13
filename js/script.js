@@ -63,25 +63,18 @@ function showTabsContent(b){
 
 
 
-// function scrollTabs() {
-//     const tabs = document.querySelector('.works-video__button');
-//
-//    document.addEventListener('scroll', () => {
-//         const count = 30;
-//         let posTabs = tabs.getBoundingClientRect().y;
-//         if(posTabs <= count) {
-//             tabs.classList.add('works-video__button--sticky');
-//             document.querySelector('.works-video__list')
-//         } else {
-//             tabs.classList.remove('works-video__button--sticky')
-//         }
-//     })
-//         }
-//
-// scrollTabs()
-//
-// const works = document.querySelector('.works-video');
-//
-// works.addEventListener('scroll', e => {
-//     console.log(e)
-// })
+function scrollTabs() {
+    const tabs = document.querySelector('.works-video__head');
+
+   document.addEventListener('scroll', () => {
+        const count = 30;
+        let posTabs = tabs.getBoundingClientRect().y;
+        if(posTabs <= count) {
+            tabs.classList.add('works-video__head--sticky');
+        } else {
+            tabs.classList.remove('works-video__head--sticky')
+        }
+    })
+        }
+
+scrollTabs()
