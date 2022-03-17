@@ -276,17 +276,19 @@ main {
     margin-top: calc(28px + (58 - 28) * ((100vw - 428px) / (1920 - 428)));
 }
 .works-video__head {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
     height: calc(24px + (75 - 24) * ((100vw - 428px) / (1920 - 428)));
 }
 .works-video__head--sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+}
+.works-video__head--absolute {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc((24px + (75 - 24) * ((100vw - 428px) / (1920 - 428)) / 2 + 340px));
 }
 .works-video__wrapper {
     position: relative;

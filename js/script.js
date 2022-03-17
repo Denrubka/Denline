@@ -65,16 +65,24 @@ function showTabsContent(b){
 
 function scrollTabs() {
     const tabs = document.querySelector('.works-video__head');
-
    document.addEventListener('scroll', () => {
+       const listY = document.querySelector('.works-video__list.show').getBoundingClientRect().bottom;
         const count = 30;
         let posTabs = tabs.getBoundingClientRect().y;
-        if(posTabs <= count) {
+       console.log(posTabs)
+        if(posTabs <= count && listY >= 445) {
             tabs.classList.add('works-video__head--sticky');
-        } else {
-            tabs.classList.remove('works-video__head--sticky')
+            tabs.classList.remove('works-video__head--absolute');
         }
+           if (listY <= 445){
+               tabs.classList.remove('works-video__head--sticky');
+               tabs.classList.add('works-video__head--absolute');
+           }
+            if(document.querySelector('.works-video__list.show').getBoundingClientRect().y > 0) {
+                tabs.classList.remove('works-video__head--absolute');
+                tabs.classList.remove('works-video__head--sticky');
+            }
     })
-        }
+}
 
 scrollTabs()
